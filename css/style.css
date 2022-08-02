@@ -15,11 +15,46 @@ html,body{height: 100%;padding:0 2%;}
     margin:0 auto;
     background-color: rgb(235,235,235);
     border-top: 3px solid rgb(100,123,255);
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
+
+/*** CPLIPBORD ****/
+
+.clipbord{
+    opacity: 0;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width:100%;
+    max-width: 280px;
+    height: 50px;
+    background-color: green;
+    color:white;
+    z-index: 1;
+    padding:0 10px;
+    transition: 0.7s;
+    border-radius: 8px;
+}
+
+.clipbord i{
+    display: inline-block;
+    line-height: 50px;
+    padding-right: 15px;
+    font-size: 2rem;
+}
+
+.clipbord p{
+    position: relative;
+    top:-5px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+/*** CPLIPBORD ****/
+
+section.main{padding:60px 0 0 0;}
 
 .center h2{
     margin:10px 0 50px 0;
@@ -29,30 +64,34 @@ html,body{height: 100%;padding:0 2%;}
 
 div.form-wraper{width: 100%;}
 
-div.form-wraper textarea{
+div.form-wraper textarea,div.results{
     width: 100%;
-    height: 120px;
+    min-height: 120px;
+    height: auto;
     resize: vertical;
     border-radius: 7px;
     border: 1px solid #ccc;
     font-size: 13px;
     padding:10px;
+    word-break: break-all;
 }
-
+/*
 div.results{
     width: 100%;
-    height: 120px;
+    min-height: 120px;
+    height: auto;
     resize: vertical;
+    word-break: break-all;
     border-radius: 7px;
     border: 1px solid #666666;
     font-size: 13px;
     padding:10px;
 }
-
+*/
 div.form-wraper textarea,div.form-wraper button[type=button],div.clean > button,div.copy > button:focus{outline: 0;}
 
 div.form-wraper button[type=button],div.clean > button,div.copy > button{
-    margin:8px auto 0 auto;
+    margin:8px auto 15px auto;
     display: block;
     background-color: #533557;
     padding:10px;
@@ -64,3 +103,9 @@ div.form-wraper button[type=button],div.clean > button,div.copy > button{
 }
 
 div.form-wraper button[type=button]:hover,div.clean > button:hover,div.copy > button:hover{background-color: #351e38;}
+
+@media screen and (max-width: 760px){
+    div.flex{flex-direction: column;}
+    div.flex:last-child{flex-direction: column-reverse;}
+    .center h2{font-size: 2rem;}
+}
