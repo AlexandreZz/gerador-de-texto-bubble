@@ -2,20 +2,65 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-html,body{height: 100%;}
+html,body{height: 100%;padding:0 2%;}
 
-.flex{display: flex;justify-content: space-between;}
+.flex{display: flex;justify-content: space-between;align-items: center;}
 .center{
     width: 100%;
     max-width: 1280px;
-    padding:0 4%;
+    padding:4%;
     margin:0 auto;
-    background-color: red;
+    background-color: rgb(235,235,235);
+    border-top: 3px solid rgb(100,123,255);
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+.center h2{
+    margin:10px 0 50px 0;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+div.form-wraper{width: 100%;}
+
+div.form-wraper textarea{
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    padding:10px;
+}
+
+div.results{
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    border-radius: 7px;
+    border: 1px solid #666666;
+    font-size: 13px;
+    padding:10px;
+}
+
+div.form-wraper textarea,div.form-wraper button[type=button],div.clean > button,div.copy > button:focus{outline: 0;}
+
+div.form-wraper button[type=button],div.clean > button,div.copy > button{
+    margin:8px auto 0 auto;
+    display: block;
+    background-color: #533557;
+    padding:10px;
+    border: 0;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+div.form-wraper button[type=button]:hover,div.clean > button:hover,div.copy > button:hover{background-color: #351e38;}
