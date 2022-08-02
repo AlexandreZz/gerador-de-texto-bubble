@@ -75,19 +75,7 @@ div.form-wraper textarea,div.results{
     padding:10px;
     word-break: break-all;
 }
-/*
-div.results{
-    width: 100%;
-    min-height: 120px;
-    height: auto;
-    resize: vertical;
-    word-break: break-all;
-    border-radius: 7px;
-    border: 1px solid #666666;
-    font-size: 13px;
-    padding:10px;
-}
-*/
+
 div.form-wraper textarea,div.form-wraper button[type=button],div.clean > button,div.copy > button:focus{outline: 0;}
 
 div.form-wraper button[type=button],div.clean > button,div.copy > button{
