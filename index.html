@@ -13,6 +13,12 @@
 </head>
 <body>
 
+    <div class="clipbord" id="clipbord" style="display:none;">
+        <i>&#10003;</i>
+        <p>Copied in clipboard</p>
+    </div> <!--CLIPBORD-->
+
+
     <section class="main">
         <div class="center">
             <h2>Gerador de texto Bubble</h2>
@@ -20,26 +26,26 @@
             <div class="flex">
                 
                 <div class="form-wraper">
-                    <textarea></textarea>
+                    <textarea id="entradaDoUsuario"></textarea>
                 </div> <!-- FORM WRAPER -->
 
                 <div class="form-wraper">
-                    <button type='button'>Mostrar resultado</button>
+                    <button type='button' onclick="mostrarAlfabetoBubble()">Mostrar resultado</button>
                 </div> <!-- FORM-WRAPER -->
 
-                <div class="form-wraper" style="display: none;">
-                    <div class="results">este é o resultado</div>
+                <div class="form-wraper" style="display: none;" id="mostrarResultado">
+                    <div class="results"></div>
                 </div> <!-- FORM-WRAPER -->
 
             </div> <!-- FLEX -->
 
             <div class="flex">
                 <div class="clean">
-                    <button type="submit">Clean</button>
+                    <button type="submit" onclick="cleanTextArea()">Clean</button>
                 </div> <!-- FORM-WRAPER -->
 
                 <div class="copy" style="display:none;">
-                    <button type="submit">Copy All to Clipboard</button>
+                    <button type="submit" onclick="copiarTextoBubble()">Copy All to Clipboard</button>
                 </div> <!-- FORM-WRAPER -->
             </div> <!-- FLEX -->
 
